@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #d0cfcf;
+}
+/*--TITULO--*/
+.header h1{
+    text-align: center;
+}
+
+
+/* BUSCAR TAREAS */
+.buscar-tareas{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.input-con-icono{
+    position: relative;
+}
+
+#buscar{
+    width: 700px;
+    padding: 10px 10px 10px 45px;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid #333;
+}
+
+.icono-buscar{
+    position: absolute;
+    left:  10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none; /* El icono no bloquea el input */
+}
+
+
+/* AGREGAR NUEVAS TAREAS */
+.container-agregar-tareas{
+    display: flex;
+    justify-content: center;
+}
+
+#escribir-nueva-tarea{
+    align-self: center;
+    padding: 10px;
+    outline: none;
+    width: 330px;
+    border-radius: 6px 0 0 6px;
+    border:1px solid #333;
+    border-right: none;
+}
+
+#agregar-tarea{
+    align-self: center;
+    padding: 4px;
+    width: 60px;
+    background-color: #48e;
+    border: 1px solid #333;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+}
+
+
+
+/* MOSTRAR TAREAS  */
+
+.lista-de-tareas{
+    max-width: 600px;
+    max-height: 350px;
+    overflow: auto;
+    margin:30px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.lista-de-tareas h2{
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 10px 0 30px 0;
+}
+
+.tareas{
+    background-color: white;
+    padding: 12px;
+    margin: 0 10px 0 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nombre-tarea{
+    margin: 5px;
+    flex: 1;
+    word-break: break-word;
+    font-size: 1rem;
+}
+
+.fecha-de-creacion{
+    margin: 5px;
+    font-size: .8rem;
+}
+
+
+.eliminar-tarea, .editar-tarea, .marcar-tarea{
+    background-color: transparent;
+    border: none;
+    transition:transform .3s;
+}
+
+.eliminar-tarea:hover,.editar-tarea:hover,.marcar-tarea:hover{
+    transform: scale(1.3);
+}
+
+.acciones-tarea{
+    display: flex;
+    column-gap: 20px;
+}
+
+.tarea-completa{
+    color: #080;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.info-tarea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    #buscar{
+        width: 90%;
+    }
+    #escribir-nueva-tarea{
+        width: 70%;
+    }
+
+    .lista-de-tareas{
+        width: 90%;
+    }
+}
+
