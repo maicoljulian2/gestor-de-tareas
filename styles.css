@@ -10,33 +10,7 @@ body{
 }
 
 
-/* BUSCAR TAREAS */
-.buscar-tareas{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
 
-.input-con-icono{
-    position: relative;
-}
-
-#buscar{
-    width: 700px;
-    padding: 10px 10px 10px 45px;
-    outline: none;
-    border-radius: 6px;
-    border: 1px solid #333;
-}
-
-.icono-buscar{
-    position: absolute;
-    left:  10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-    pointer-events: none; /* El icono no bloquea el input */
-}
 
 
 /* AGREGAR NUEVAS TAREAS */
