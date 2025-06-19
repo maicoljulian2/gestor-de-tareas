@@ -69,6 +69,12 @@ const crearTarea = (nombre, fecha,id, completa = false ) => {
     fechaDeCreacion.textContent = fecha;                // Mostrar la fecha de creación
     editar.textContent = "edit";                        // Icono "edit"
 
+    // para no traducir los iconos y que no se desaparescan cuando se traduce la pagina
+    editar.setAttribute("translate", "no");
+    eliminar.setAttribute("translate", "no");
+    marcar.setAttribute("translate", "no");
+
+
     //funcion para editar tareas
     editarTarea.addEventListener("click", () => {
     if (editar.textContent === "edit") {
